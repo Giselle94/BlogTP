@@ -1,0 +1,223 @@
+/* *{
+  box-sizing: border-box;/* 
+}*/
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+aside{
+  background-color: rgb(218, 236, 230);
+  padding: 20px;
+  flex: 30px;
+  margin: 5px;
+
+}
+aside:hover{
+  border: 2px solid wheat;
+}
+section{
+  flex: 70px;
+  padding: 1Opx;
+  margin: 5px;
+}
+section h2{
+  text-align: center;
+}
+aside h2{
+  text-align: center;
+}
+
+
+.imagenblog{
+  width: 300px;
+  height: 300px;
+  border: 2px snow;
+  align-items: center;
+  justify-content: center;
+}
+.tituloprincipal h2,h3{
+  display: flex;
+  background-color: rgb(204, 187, 187);
+  flex-wrap: wrap;
+  padding: 3px;
+  text-align: center;
+}
+
+
+/* TO DO */
+/*
+
+*/
+
+/* Constantes */
+:root {
+  --html-min-width: 440px;
+
+  --banner-bg-color: rgb(228, 211, 211);
+  --menu-bg-color: rgba(70, 7, 7, 0.9);
+  --main-bg-color: white;
+  --footer-bg-color:  rgb(228, 211, 211);
+
+  --link-color: hsl(29, 73%, 61%);
+  --hover-link-color: hsl(10, 73%, 61%);
+  --active-link-color: hsl(10, 82%, 22%);
+  --link-font-size: 1rem;
+  --box-shadow-color: rgba(70, 7, 7, 0.5);
+  --box-shadow-color2: rgba(70, 7, 7, 0.3);
+
+  --font-family: 'Work Sans', sans-serif;
+  --font-size: 0.5rem;
+  --font-size: 1rem;
+  --footer-font-size: 0.7rem;
+
+  --header-font-family: 'EB Garamond', serif;
+  --logo-height: 75px;
+
+  --box-shadow: 0rem 0rem 0.3rem var(--box-shadow-color), 0rem 0rem 0.5rem var(--box-shadow-color2);
+
+  --banner-padding: 0 0.6rem 0;
+  --banner-margin: 0 0rem 0.8rem 0;
+  /* banner-height= altura del logo + padding del banner + margin */
+  --banner-height: calc(var(--logo-height) + 0.8rem);
+  --banner-width: 100%;
+
+  --aside-padding: 0.6rem;
+
+  --social-icon-height: 2rem;
+  --social-icon-margin: 0rem 1rem 1rem 1rem;
+  --footer-padding: 0.5rem 0.6rem 0.5rem;
+  /* --footer-margin: 0 0.6rem 0.8rem; */
+  /* footer-height= altura texto + altura iconos + margen iconos +footer padding + footer margin*/
+  --footer-height: calc(var(--font-size) + var(--social-icon-height) + 1rem + 1rem + 0.8rem);
+
+  --main-min-height: calc(100vh - (var(--banner-height)) - (var(--footer-height)));
+
+}
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  /* box-sizing: border-box; */
+  min-width: var(--html-min-width);  /* restingimos el ancho mínimo para correcta visualizacion */
+  transition: all 0.3s;
+}
+
+header, footer {
+  width: var(--banner-width);    
+  background-color: var(--banner-bg-color);
+  box-shadow: var(--box-shadow);
+  margin: var(--banner-margin);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--banner-padding);
+  font-family: var(--header-font-family);
+}
+
+.logo {
+  /* gap: 2em; */
+  align-items: center;
+  z-index: 1;
+  height: var(--logo-height);
+}    
+
+.logo p {
+  color: brown;
+  display: inline-block;
+  margin-left: 0.8em;
+}
+
+a img, a span {
+  vertical-align: middle;
+}
+
+
+.navmenu { 
+display: flex;
+  justify-content:flex-start; 
+  align-items: center;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  list-style-type: none;
+} 
+
+nav a, nav .material-symbols-outlined {
+  color: var(--link-color);
+  font-size: var(--link-font-size);    
+}
+
+/* nav */
+a {
+  transition-duration: 0.3s;
+  text-decoration: none;
+}
+
+
+nav a:hover {
+  color: var(--hover-link-color);
+  cursor: pointer;
+}
+
+nav a:active {
+  color: var(--active-link-color);
+}
+
+/************************ Menu hamburguesa ***************************/
+.btn-hamburguesa {
+  color: var(--link-color);
+  padding: 3px;
+  border: none;
+  background-color: var(--banner-bg-color); 
+  transition-duration: 0.3s;
+}
+
+.btn-hamburguesa i {
+  font-size: 60px;
+}
+
+
+.btn-hamburguesa:hover {
+  color: var(--hover-link-color);
+  cursor: pointer;
+}
+
+#menu-check {
+  display: none;
+}
+
+body {
+  min-height: 100vh;
+}
+
+
+
+
+
+
+footer {
+  text-align: center;
+  font-weight: bold;
+  padding: var(--footer-padding);
+  font-size: var(--footer-font-size);
+
+}
+
+/* iconos de redes sociales */
+footer a img {
+  height: var(--social-icon-height);
+  margin: var(--social-icon-margin);
+}
+
+
